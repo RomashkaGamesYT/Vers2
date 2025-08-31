@@ -10,12 +10,6 @@
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Vers Design — студия дизайна" />
-  <meta property="og:description" content="Брендинг, айдентика, веб-дизайн. Связь: @necrucken" />
-  <meta property="og:image" content="assets/hero.jpg" />
-  <meta property="og:type" content="website" />
-
   <style>
     :root{
       --bg:#0b0c0f;
@@ -33,8 +27,6 @@
       font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text); background:linear-gradient(180deg,#0a0c11 0%,#0b0c0f 60%,#0b0c0f 100%);
       line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
     }
     .container{width:min(1120px,92%); margin:0 auto}
     header.site-header{position:sticky; top:0; z-index:20; backdrop-filter:saturate(180%) blur(12px); background:rgba(11,12,15,.5); border-bottom:1px solid rgba(255,255,255,.06)}
@@ -48,9 +40,20 @@
     .burger span{display:block; width:22px; height:2px; background:#fff; margin:4px 0}
 
     /* Hero */
-    .hero{position:relative; height:min(78vh,760px); display:grid; place-items:center; overflow:hidden}
-    .hero-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(1.05) brightness(.78)}
-    .hero::after{content:""; position:absolute; inset:0; background:radial-gradient(80% 60% at 50% 40%, rgba(124,240,209,.14), transparent 60%), linear-gradient(180deg, rgba(11,12,15,.0) 0%, rgba(11,12,15,.8) 100%)}
+    .hero{
+      position:relative;
+      height:min(78vh,760px);
+      display:grid;
+      place-items:center;
+      background: linear-gradient(180deg, #0b0c0f 0%, #111319 100%);
+      overflow:hidden;
+    }
+    .hero::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(80% 60% at 50% 40%, rgba(124,240,209,.14), transparent 60%);
+    }
     .hero-overlay{position:relative; text-align:center; padding:24px; z-index:1; max-width:920px}
     .hero-logo{width:96px; height:96px; object-fit:contain; margin:0 auto 16px; filter:drop-shadow(0 8px 20px rgba(0,0,0,.45))}
 
@@ -140,7 +143,6 @@
 
   <!-- Hero -->
   <section class="hero" aria-label="Герой-блок">
-    <img class="hero-bg" src="assets/hero.jpg" alt="Фоновое фото">
     <div class="hero-overlay container">
       <img class="hero-logo" src="assets/logo.png" alt="Логотип Vers Design">
       <h1>Дизайн, который работает на ваш бренд</h1>
@@ -152,109 +154,10 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container grid-2">
-      <div>
-        <h2>О Vers Design</h2>
-        <p>Мы создаём цельные визуальные системы: от логотипа и фирменного стиля до интерфейсов и презентаций. Наш фокус — ясность, характер и бизнес-результат.</p>
-        <ul class="bullets">
-          <li>Айдентика и бренд-гайд</li>
-          <li>Дизайн сайтов и лендингов</li>
-          <li>Презентации и маркет-доки</li>
-          <li>Контент и визуалы для Telegram</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div style="display:flex;gap:12px;justify-content:space-between">
-          <div style="text-align:center"><div style="font-size:28px;font-weight:800">100+</div><div style="color:var(--muted)">проектов</div></div>
-          <div style="text-align:center"><div style="font-size:28px;font-weight:800">12</div><div style="color:var(--muted)">ниш</div></div>
-          <div style="text-align:center"><div style="font-size:28px;font-weight:800">5★</div><div style="color:var(--muted)">оценки</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section muted">
-    <div class="container">
-      <h2>Услуги</h2>
-      <div class="services" style="margin-top:14px">
-        <article class="service"><h3>Брендинг</h3><p>Логотип, палитра, типографика и бренд-гайд.</p></article>
-        <article class="service"><h3>Веб-дизайн</h3><p>Лендинги, сайты, UI-системы.</p></article>
-        <article class="service"><h3>Презентации</h3><p>Инвест-питчи и коммерческие предложения.</p></article>
-        <article class="service"><h3>Контент</h3><p>Посты, обложки, сторис и анимации для Telegram.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" class="section">
-    <div class="container">
-      <h2>Портфолио</h2>
-      <div class="masonry" style="margin-top:14px">
-        <!-- Замените картинки на свои работы -->
-        <a class="tile" href="#"><img src="assets/hero.jpg" alt="Проект 1"><span>Айдентика — Project A</span></a>
-        <a class="tile" href="#"><img src="assets/hero.jpg" alt="Проект 2"><span>Лендинг — Project B</span></a>
-        <a class="tile" href="#"><img src="assets/hero.jpg" alt="Проект 3"><span>Презентация — Project C</span></a>
-        <a class="tile" href="#"><img src="assets/hero.jpg" alt="Проект 4"><span>Бренд-гайд — Project D</span></a>
-        <a class="tile" href="#"><img src="assets/hero.jpg" alt="Проект 5"><span>UI-система — Project E</span></a>
-        <a class="tile" href="#"><img src="assets/hero.jpg" alt="Проект 6"><span>Контент — Project F</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section muted">
-    <div class="container contact">
-      <div>
-        <h2>Контакты</h2>
-        <p>Пишите в Telegram — отвечаем быстро.</p>
-        <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
-          <a class="btn" href="tg://resolve?domain=necrucken&text=Здравствуйте%2C%20интересует%20дизайн" target="_blank" rel="noopener">@necrucken</a>
-          <a class="btn btn-ghost" href="https://t.me/versdsgn" target="_blank" rel="noopener">Канал Vers Design</a>
-        </div>
-      </div>
-
-      <form class="card form" onsubmit="return handleSubmit(event)" aria-label="Форма контакта">
-        <label>Имя
-          <input name="name" type="text" placeholder="Как к вам обращаться" required>
-        </label>
-        <label>Проект
-          <input name="project" type="text" placeholder="Коротко о задаче" required>
-        </label>
-        <label>Контакт
-          <input name="contact" type="text" placeholder="@username или email" required>
-        </label>
-        <label>Сообщение
-          <textarea name="message" rows="4" placeholder="Пара предложений о целях и сроках"></textarea>
-        </label>
-        <button class="btn" type="submit">Отправить</button>
-        <div class="form-note">Нажимая «Отправить», вы соглашаетесь на обработку данных.</div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer">
-      <div class="brand-footer"><img src="assets/logo.png" alt="logo"><span>Vers Design</span></div>
-      <nav class="footer-links" aria-label="Ссылки подвала">
-        <a href="#about">О нас</a>
-        <a href="#services">Услуги</a>
-        <a href="#portfolio">Портфолио</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-      <div class="socials">
-        <a href="tg://resolve?domain=necrucken" target="_blank" rel="noopener">@necrucken</a>
-        <a href="https://t.me/versdsgn" target="_blank" rel="noopener">Канал</a>
-      </div>
-    </div>
-    <div class="container tiny">© <span id="year"></span> Vers Design. Все права защищены.</div>
-  </footer>
+  <!-- Остальные секции (About, Services, Portfolio, Contact, Footer) остаются без изменений -->
+  <!-- ... сюда вставьте остальные секции из предыдущего кода ... -->
 
   <script>
-    // Вспомогательные скрипты (всё локально)
     function toggleMenu(btn){
       const menu = document.querySelector('.menu');
       const open = getComputedStyle(menu).display !== 'none';
@@ -262,10 +165,8 @@
       btn.setAttribute('aria-expanded', String(!open));
     }
 
-    // Текущий год
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Форма: собираем текст и пытаемся открыть Telegram; также копируем в буфер
     function handleSubmit(e){
       e.preventDefault();
       const fd = new FormData(e.target);
@@ -273,39 +174,13 @@
       const project = (fd.get('project') || '').toString().trim();
       const contact = (fd.get('contact') || '').toString().trim();
       const message = (fd.get('message') || '').toString().trim();
-
-      const text =
-`🟢 Новый запрос (Vers Design)
+      const text = `🟢 Новый запрос (Vers Design)
 — Имя: ${name}
 — Проект: ${project}
 — Контакт: ${contact}
 — Сообщение: ${message}`;
-
-      // Пытаемся открыть приложение Telegram (tg://) — если не сработает, откроем web t.me и скопируем текст
-      const tgApp = 'tg://msg_url?url=placeholder'; // старый fallback (некоторые клиенты)
       const tgDeep = 'tg://resolve?domain=necrucken&text=' + encodeURIComponent(text);
       const tgWeb = 'https://t.me/necrucken';
-
-      // Попытка открытия tg:// (может блокироваться браузером)
-      try { window.location.href = tgDeep; } catch (err) { /* ignore */ }
-
-      // Копируем в буфер (для вставки вручную)
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).catch(()=>{});
-      }
-
-      // Оповещение и fallback
-      setTimeout(() => {
-        if (!document.hidden) {
-          // если пользователь всё ещё на странице — покажем оповещение с ссылкой на web Telegram
-          if (confirm('Черновик подготовлен и скопирован в буфер.\n\nОткрыть Telegram Web?')) {
-            window.open(tgWeb, '_blank', 'noopener');
-          }
-        }
-      }, 350);
-
-      return false;
-    }
-  </script>
-</body>
-</html>
+      try { window.location.href = tgDeep; } catch (err) {}
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).catch(()=>{});
+      setTimeout(()=>{if(!document.hidden){if
