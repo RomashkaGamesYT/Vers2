@@ -184,13 +184,12 @@
     <div class="container">
       <h2>Портфолио</h2>
       <div class="masonry" style="margin-top:14px">
-        <!-- Пример с логотипом вместо картинок -->
-        <a class="tile" href="#"><img src="assets/logo.png" alt="Проект 1"><span>Айдентика — Project A</span></a>
-        <a class="tile" href="#"><img src="assets/logo.png" alt="Проект 2"><span>Лендинг — Project B</span></a>
-        <a class="tile" href="#"><img src="assets/logo.png" alt="Проект 3"><span>Презентация — Project C</span></a>
-        <a class="tile" href="#"><img src="assets/logo.png" alt="Проект 4"><span>Бренд-гайд — Project D</span></a>
-        <a class="tile" href="#"><img src="assets/logo.png" alt="Проект 5"><span>UI-система — Project E</span></a>
-        <a class="tile" href="#"><img src="assets/logo.png" alt="Проект 6"><span>Контент — Project F</span></a>
+        <a class="tile" href="#"><img src="assets/project1.png" alt="Проект 1"><span>Айдентика — Project A</span></a>
+        <a class="tile" href="#"><img src="assets/project2.png" alt="Проект 2"><span>Лендинг — Project B</span></a>
+        <a class="tile" href="#"><img src="assets/project3.png" alt="Проект 3"><span>Презентация — Project C</span></a>
+        <a class="tile" href="#"><img src="assets/project4.png" alt="Проект 4"><span>Бренд-гайд — Project D</span></a>
+        <a class="tile" href="#"><img src="assets/project5.png" alt="Проект 5"><span>UI-система — Project E</span></a>
+        <a class="tile" href="#"><img src="assets/project6.png" alt="Проект 6"><span>Контент — Project F</span></a>
       </div>
     </div>
   </section>
@@ -264,4 +263,6 @@
       const tgDeep = 'tg://resolve?domain=necrucken&text=' + encodeURIComponent(text);
       const tgWeb = 'https://t.me/necrucken';
       try { window.location.href = tgDeep; } catch {}
-      if(navigator.clipboard && navigator.clipboard.writeText){navigator.clip
+      if(navigator.clipboard && navigator.clipboard.writeText){navigator.clipboard.writeText(text).catch(()=>{});}
+      setTimeout(() => {
+        if (!document.hidden && confirm('
