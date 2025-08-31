@@ -33,6 +33,33 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    /* хаос-эффект */
+    .chaos {
+      animation: neonPulse 1.5s infinite alternate, shake 3s infinite;
+      box-shadow: 0 0 15px #a855f7, 0 0 40px #9333ea;
+    }
+    @keyframes neonPulse {
+      from { box-shadow: 0 0 10px #a855f7, 0 0 20px #9333ea; }
+      to   { box-shadow: 0 0 25px #a855f7, 0 0 60px #9333ea; }
+    }
+    @keyframes shake {
+      0%, 100% { transform: translate(0, 0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(-2px, -1px); }
+      80% { transform: translate(1px, 2px); }
+    }
+
+    /* Логотип */
+    .logo {
+      filter: drop-shadow(0 0 15px #a855f7) drop-shadow(0 0 40px #9333ea);
+      animation: logoPulse 2s infinite alternate;
+    }
+    @keyframes logoPulse {
+      from { filter: drop-shadow(0 0 10px #a855f7) drop-shadow(0 0 20px #9333ea); }
+      to   { filter: drop-shadow(0 0 25px #a855f7) drop-shadow(0 0 50px #9333ea); }
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-8">
@@ -40,10 +67,17 @@
   <!-- particles.js контейнер -->
   <div id="particles-js"></div>
 
-  <!-- Заголовок -->
-  <h1 class="text-5xl font-extrabold mb-12 tracking-wide z-10" data-aos="fade-down">
-    Vers Design
-  </h1>
+  <!-- Логотип -->
+  <div class="mb-8 z-10" data-aos="fade-down">
+    <!-- Положи картинку рядом с файлом как logo.png -->
+    <img src="logo.png" alt="Vers Design Logo" class="w-48 md:w-64 mx-auto logo">
+  </div>
+
+  <!-- Описание -->
+  <p class="max-w-2xl text-center text-lg text-gray-300 mb-12 z-10" data-aos="fade-up">
+    Vers Design — это современное оформление, уникальные стили и творческий хаос.  
+    Мы создаём дизайн, который цепляет и остаётся в памяти.
+  </p>
 
   <!-- Карточки -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl z-10">
@@ -51,7 +85,7 @@
     <div class="bg-gray-800/80 backdrop-blur-md border border-gray-700 shadow-2xl rounded-2xl p-6 text-center hover:scale-105 hover:shadow-purple-500/40 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
       <h2 class="text-2xl font-bold mb-4">Базовый</h2>
       <p class="text-gray-300 mb-6">Минимальный набор для старта.</p>
-      <span class="text-3xl font-extrabold mb-6 block">$49</span>
+      <span class="text-3xl font-extrabold mb-6 block">4 900 ₽</span>
       <button class="rounded-xl px-6 py-2 text-lg bg-purple-600 hover:bg-purple-700 transition">Выбрать</button>
     </div>
 
@@ -59,17 +93,29 @@
     <div class="bg-gray-800/80 backdrop-blur-md border border-gray-700 shadow-2xl rounded-2xl p-6 text-center hover:scale-105 hover:shadow-purple-500/40 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
       <h2 class="text-2xl font-bold mb-4">Ультра</h2>
       <p class="text-gray-300 mb-6">Оптимальный баланс цены и качества.</p>
-      <span class="text-3xl font-extrabold mb-6 block">$149</span>
+      <span class="text-3xl font-extrabold mb-6 block">14 900 ₽</span>
       <button class="rounded-xl px-6 py-2 text-lg bg-purple-600 hover:bg-purple-700 transition">Выбрать</button>
     </div>
 
     <!-- Хаос -->
-    <div class="bg-gray-800/80 backdrop-blur-md border border-gray-700 shadow-2xl rounded-2xl p-6 text-center hover:scale-105 hover:shadow-purple-500/40 transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+    <div class="chaos bg-gray-800/90 backdrop-blur-md border border-purple-700 rounded-2xl p-6 text-center transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
       <h2 class="text-2xl font-bold mb-4">Хаос</h2>
-      <p class="text-gray-300 mb-6">Максимум возможностей и свободы.</p>
-      <span class="text-3xl font-extrabold mb-6 block">$299</span>
-      <button class="rounded-xl px-6 py-2 text-lg bg-purple-600 hover:bg-purple-700 transition">Выбрать</button>
+      <p class="text-gray-200 mb-6">Максимум возможностей, свободы и эффектов.  
+        Настоящий выбор для тех, кто хочет выделиться.</p>
+      <span class="text-3xl font-extrabold mb-6 block">29 900 ₽</span>
+      <button class="rounded-xl px-6 py-2 text-lg bg-fuchsia-600 hover:bg-fuchsia-700 transition">Выбрать</button>
     </div>
+  </div>
+
+  <!-- Контакты -->
+  <div class="mt-16 text-center z-10" data-aos="fade-up">
+    <h3 class="text-2xl font-bold mb-4">Контакты</h3>
+    <p class="mb-2">Написать в Telegram: 
+      <a href="https://t.me/necrucken" target="_blank" class="text-purple-400 hover:text-purple-500">@necrucken</a>
+    </p>
+    <p>Наш канал: 
+      <a href="https://t.me/versdsgn" target="_blank" class="text-purple-400 hover:text-purple-500">https://t.me/versdsgn</a>
+    </p>
   </div>
 
   <!-- AOS -->
