@@ -72,8 +72,7 @@
     .services{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
     .service{padding:16px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.04)}
     .service h3{margin:0 0 6px}
-
-    /* Masonry */
+/* Masonry */
     .masonry{columns:1; column-gap:14px}
     @media(min-width:560px){ .masonry{columns:2} }
     @media(min-width:960px){ .masonry{columns:3} }
@@ -137,7 +136,7 @@
       <h1>Дизайн, который работает на ваш бренд</h1>
       <p class="lead">Брендинг • Айдентика • Веб-дизайн • Презентации</p>
       <div class="cta-row">
-        <a class="btn" href="tg://resolve?domain=necrucken&text=Здравствуйте%2C%20хочу%20обсудить%20проект" target="_blank" rel="noopener">Написать @necrucken</a>
+        <a class="btn" href="https://t.me/m/7Wo0-o07YzBi" target="_blank" rel="noopener">Написать @necrucken</a>
         <a class="btn btn-ghost" href="https://t.me/versdsgn" target="_blank" rel="noopener">Канал Vers Design</a>
       </div>
     </div>
@@ -157,7 +156,7 @@
         </ul>
       </div>
       <div class="card">
-        <div style="display:flex;gap:12px;justify-content:space-between">
+<div style="display:flex;gap:12px;justify-content:space-between">
           <div style="text-align:center"><div style="font-size:28px;font-weight:800">100+</div><div style="color:var(--muted)">проектов</div></div>
           <div style="text-align:center"><div style="font-size:28px;font-weight:800">12</div><div style="color:var(--muted)">ниш</div></div>
           <div style="text-align:center"><div style="font-size:28px;font-weight:800">5★</div><div style="color:var(--muted)">оценки</div></div>
@@ -184,8 +183,8 @@
     <div class="container">
       <h2>Портфолио</h2>
       <div class="masonry" style="margin-top:14px">
-        <a class="tile" href="#"><img src="assets/project1.png" alt="Проект 1"><span>Айдентика — Project A</span></a>
-        <a class="tile" href="#"><img src="assets/project2.png" alt="Проект 2"><span>Лендинг — Project B</span></a>
+        <a class="tile" href="#"><img src="assets/project1.png" alt="Проект 1"><span>Аватарка — Project A</span></a>
+        <a class="tile" href="#"><img src="assets/project2.png" alt="Проект 2"><span>Аватарка — Project B</span></a>
         <a class="tile" href="#"><img src="assets/project3.png" alt="Проект 3"><span>Презентация — Project C</span></a>
         <a class="tile" href="#"><img src="assets/project4.png" alt="Проект 4"><span>Бренд-гайд — Project D</span></a>
         <a class="tile" href="#"><img src="assets/project5.png" alt="Проект 5"><span>UI-система — Project E</span></a>
@@ -201,7 +200,7 @@
         <h2>Контакты</h2>
         <p>Пишите в Telegram — отвечаем быстро.</p>
         <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
-          <a class="btn" href="tg://resolve?domain=necrucken&text=Здравствуйте%2C%20интересует%20дизайн" target="_blank" rel="noopener">@necrucken</a>
+          <a class="btn" href="https://t.me/m/7Wo0-o07YzBi" target="_blank" rel="noopener">@necrucken</a>
           <a class="btn btn-ghost" href="https://t.me/versdsgn" target="_blank" rel="noopener">Канал Vers Design</a>
         </div>
       </div>
@@ -233,10 +232,10 @@
         <a href="#about">О нас</a>
         <a href="#services">Услуги</a>
         <a href="#portfolio">Портфолио</a>
-        <a href="#contact">Контакты</a>
+<a href="#contact">Контакты</a>
       </nav>
       <div class="socials">
-        <a href="tg://resolve?domain=necrucken" target="_blank" rel="noopener">@necrucken</a>
+        <a href="https://t.me/m/7Wo0-o07YzBi" target="_blank" rel="noopener">@necrucken</a>
         <a href="https://t.me/versdsgn" target="_blank" rel="noopener">Канал</a>
       </div>
     </div>
@@ -252,17 +251,12 @@
     }
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    function handleSubmit(e){
+    async function handleSubmit(e){
       e.preventDefault();
       const fd = new FormData(e.target);
       const name = (fd.get('name') || '').toString().trim();
       const project = (fd.get('project') || '').toString().trim();
       const contact = (fd.get('contact') || '').toString().trim();
       const message = (fd.get('message') || '').toString().trim();
-      const text = `🟢 Новый запрос (Vers Design)\n— Имя: ${name}\n— Проект: ${project}\n— Контакт: ${contact}\n— Сообщение: ${message}`;
-      const tgDeep = 'tg://resolve?domain=necrucken&text=' + encodeURIComponent(text);
-      const tgWeb = 'https://t.me/necrucken';
-      try { window.location.href = tgDeep; } catch {}
-      if(navigator.clipboard && navigator.clipboard.writeText){navigator.clipboard.writeText(text).catch(()=>{});}
-      setTimeout(() => {
-        if (!document.hidden && confirm('
+
+      const text = `🟢 Новый запрос (Vers Design)\n— Имя: ${name}\n— Проект:
